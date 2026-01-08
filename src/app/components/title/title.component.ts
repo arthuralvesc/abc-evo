@@ -13,6 +13,5 @@ export class TitleComponent implements OnInit {
 
     ngOnInit() {
       this.titleText = this.isTelaDeCadastro ? 'Cadastro' : 'Informações';
-      console.log('titleText: ' , this.titleText, this.isTelaDeCadastro);
     }
 }
