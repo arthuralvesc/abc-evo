@@ -1,0 +1,41 @@
+<form [formGroup]="registerForm" (ngSubmit)="salvar()">
+
+    <div class="field-wrapper">
+        <label for="name">NOME:</label>
+        <input formControlName="name" id="name" placeholder="Digite seu nome:">
+        <!-- Início do tratamento de erros do nome-->
+        <div *ngIf="registerForm.get('name')?.touched" class="error-message">
+            <span *ngIf="registerForm.get('name')?.hasError('required')">Nome obrigatório</span>
+        </div>
+        <!-- Fim do tratamento de erros do nome-->
+    </div>
+
+    <div class="field-wrapper">
+        <label for="email">E-MAIL:</label>
+        <input formControlName="email" id="email" type="email" placeholder="EX: carlos@uol.com.br">
+        <!-- Início do tratamento de erros do email-->
+        <div *ngIf="registerForm.get('email')?.touched" class="error-message">
+            <span *ngIf="registerForm.get('email')?.hasError('required')">Email obrigatório</span>
+            <span *ngIf="registerForm.get('email')?.hasError('email')">Email inválido</span>
+        </div>
+        <!-- Fim do tratamento de erros do email-->
+    </div>
+
+    <div class="field-wrapper">
+        <label for="password">SENHA:</label>
+        <input formControlName="password" id="password" type="password" minlength="8" placeholder="Sua senha precisa ter pelo menos 8 caracteres">
+        <!-- Início do tratamento de erros da senha-->
+        <div *ngIf="registerForm.get('password')?.touched" class="error-message">
+            <span *ngIf="registerForm.get('password')?.hasError('required')">Senha obrigatória</span>
+            <span *ngIf="registerForm.get('password')?.hasError('minlength')">A senha possui menos de 8 caracteres</span>
+        </div>
+        <!-- Fim do tratamento de erros da senha -->
+    </div>
+
+    <div class="button-wrapper">
+        <button>
+            SALVAR
+        </button>
+    </div>
+</form>    
+

@@ -1,0 +1,42 @@
+* {
+    font-size: 16px;
+}
+
+form > .field-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 26px;
+}
+
+form > .field-wrapper > label {
+    font-weight: 500;
+    color: #000000;
+}
+
+input {
+    height: 45px;
+    padding: 0 10px;
+    margin-top: 5px;
+    border: 1px solid #d8d8d8;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #43a047;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 45px;
+    width: 20%;
+    cursor: pointer;
+}
+
+.error-message {
+    color: #FF0000;
+    margin-top: 4px;
+}
