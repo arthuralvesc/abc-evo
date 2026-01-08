@@ -6,8 +6,7 @@ import { RegisterFormComponent } from '../../components/register-form/register-f
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [HeaderComponent, TitleComponent, RegisterFormComponent], // Como são poucos componentes, resolvi não criar um módulo Shared
-  templateUrl: './register.component.html',
+  imports: [HeaderComponent, TitleComponent, RegisterFormComponent],
   styleUrl: './register.component.css'
 })
 export class RegisterComponent {
